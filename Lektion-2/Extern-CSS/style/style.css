@@ -1,0 +1,12 @@
+﻿body{
+  width: 75vw;
+  margin: 3vw auto;
+  border: 1vw dotted #ccc;
+  text-align: center;
+  color:pink;
+  background-color: #000;
+}
+
+h1{
+  font-size: 4vw;
+}

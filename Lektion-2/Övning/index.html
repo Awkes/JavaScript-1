@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <title>Andreas Åkerlöf</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+          function awkeAge() {
+            var birthDate = new Date(1983, 11, 20, 9, 32, 0, 0);
+            var curDate = new Date();
+            var age = (curDate.getTime() - birthDate.getTime()) / 31556952000;
+            return Math.trunc(age);
+          }
+        </script>
+    </head>
+    <body>
+        <h1>Andreas Åkerlöf</h1>
+        <table>
+            <tr>
+                <td>
+                  <img id="awkepic" src="../../../ProfileImage.jpg" alt="Andreas Åkerlöf">
+                </td>
+                <td>
+                  <p>
+                    Namn: Andreas Åkerlöf<br>
+                    Ålder: <script>document.write(awkeAge());</script><br>
+                    Skola: Nackademin<br>
+                    Klass: FEND18<br>
+                  </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

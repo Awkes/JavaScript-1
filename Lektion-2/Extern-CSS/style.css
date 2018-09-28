@@ -1,0 +1,12 @@
+﻿body{
+  width: 75vw;
+  margin: 3vw auto;
+  border: 1vw dashed #000;
+  text-align: center;
+  color:#0a0;
+  background-color: #a0a;
+}
+
+h1{
+  font-size: 4vw;
+}
