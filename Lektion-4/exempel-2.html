@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exempel 2</title>
+</head>
+<body>
+    <h1>Exempel 2</h1>
+    <script>
+        "use strict";
+
+        // Deklarera variablar
+        var namn1;
+        let namn2;
+        let namn3, namn4;
+
+        // Tilldela värden till variablar
+        namn1 = "Andreas";
+        namn2 = "Kurt-Kent";
+
+        // Initiera (deklarera och tilldela)
+        let namn5 = "Frugo";
+
+        // Initiera flera variabler
+        let firstName = "Andreas",
+            lastName = "Åkerlöf",
+            age = 45,
+            mobile = "070-1234567";
+
+        var fru = "Erika"; // En automatisk initiering av en variabel (global)
+                       // OBS! INTE BRA
+
+        fru = namn5; // Vi byter ut värdet i fru till värdet från namn5 (byter fru)
+        
+        console.log(namn5);
+        console.log(fru);
+        // console.log(barn); // ReferenceError
+
+        // Skapa en konstant
+        const MAX_VALUE = 10;
+        // MAX_VALUE = 20; // Fel, vi får ite ändra konstanter.
+        console.log(MAX_VALUE);
+
+        // let 123; // Vi får inte börja variabelnamn med siffror.
+        let x1, x2, y1, y2; // Detta är ok, varnamn börjar inte på siffra.
+
+    </script>
+</body>
+</html>
