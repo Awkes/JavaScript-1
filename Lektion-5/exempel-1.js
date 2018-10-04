@@ -84,3 +84,19 @@ stack.pop();
 console.log(stack);
 
 console.log("");
+console.log("---------------------------------------------------");
+console.log("");
+
+// Mer om array-konstruktorn
+let test1 = new Array(10,20,30); // Skapar en array med 3 element och 3 värden.
+let test2 = new Array(10); // Skapar en array med 10 tomma element.
+let test3 = [10]; // Skapar en array med ett element som har number 10 som värde.
+let test4 = new Array("10"); // Skapar en array med ett element som har sträng 10 som värde.
+
+test2.push(100); // Lägger till värdet 100 på position 10 efter de 10 tomma elementen.
+
+console.log(test1);
+console.log(test2);
+console.log(test3);
+console.log(test4);
+
