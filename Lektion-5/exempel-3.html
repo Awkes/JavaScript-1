@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exempel 3</title>
+</head>
+<body>
+
+    <script>
+    // window är globalt i webläsare, man behöver exempelvis inte skriva window.alert() utan istället skriver man bara alert() elle prompt()
+
+    let name = prompt("Vad heter du?");
+    alert("Hej " + name + "!");
+
+    let tal1 = prompt("Ange tal 1");
+    let tal2 = prompt("Ange tal 2");
+    
+    let summa = Number(tal1) + Number(tal2); // Explicit typomvandling, string -> number
+    let summa2 = +tal1 + +tal2; // fungerar lika som ovanstående. + = unary operator
+
+    alert("Summan av " + tal1 + " och " + tal2 + " är: " + summa + " eller " + summa2);
+
+    </script>
+    
+</body>
+</html>
