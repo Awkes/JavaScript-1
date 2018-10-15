@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uppgift 2</title>
+</head>
+<body>
+    <h1>Inlämningsuppgift 2 - Uppgift 2</h1>
+    <script>
+        /* Läser in höjd och bredd, sen räknas area och omkrets ut
+           med hjälp av funktionerna */
+        w = prompt("Skriv in rektangelns bredd: ");
+        h = prompt("Skriv in rektangelns höjd: ");
+        function area( w,h) {
+            return w*h;
+        }
+        function omkrets(w,h) {
+            return (w*2)+(h*2);
+        }
+        alert(
+            "Rektangelns area är: " + area(w,h) +
+            "\nRektangelns omkrets är: " + omkrets(w,h)
+        );
+    </script>
+</body>
+</html>
