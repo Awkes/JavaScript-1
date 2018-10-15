@@ -1,4 +1,4 @@
-/ Arbeta med JavaScripts globala objekt
+// Arbeta med JavaScripts globala objekt
 
 // Varning, problem med var
 // Om du deklarerar variabler som råkar ha samma namn som objektets egenskaper
@@ -13,8 +13,4 @@ function demo() {
     // this pekar på ett objekt som heter window i webbläsaren, inte i node.
 }
 // demo();
-
-
-// Två bra metoder i objektet Window.
-
             
