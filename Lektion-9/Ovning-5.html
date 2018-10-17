@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lektion 9 - Övning 5</title>
+</head>
+<body>
+    <h1>Avstånd mellan kordinater:</h1>
+    <p id="kordinater">
+        <script>
+            let x1 = prompt('Ange x-kordinaten för punkt 1: ');
+            let y1 = prompt('Ange y-kordinaten för punkt 1: ');
+            let x2 = prompt('Ange x-kordinaten för punkt 2: ');
+            let y2 = prompt('Ange y-kordinaten för punkt 2: ');
+
+            let d = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
+
+            document.getElementById('kordinater').innerText = 'Avståndet mellan (' +x1+','+y1+') och ('+x2+','+y2+') är: '+d.toFixed(2);
+        </script>
+    </p>
+</body>
+</html>

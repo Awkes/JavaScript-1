@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lektion 9 - Övning 4</title>
+</head>
+<body>
+    <h1>Klocka</h1>
+    <p id="klocka">
+        <script>
+            let klockan = function () { 
+                let klocka = new Date();
+                document.getElementById('klocka').innerText = klocka.toTimeString().slice(0,8); 
+            }
+            klockan();
+            setInterval(klockan,1000);
+        </script>
+    </p>
+</body>
+</html>
