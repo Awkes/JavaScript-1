@@ -43,6 +43,18 @@ let objektEgenskaper = {
 objektEgenskaper.age = 34;
 console.log(objektEgenskaper.namn + " är " + objektEgenskaper.age + " år.");
 
+/* Skapar två objekt av det egna objektet Skiva, med hjälp av en
+   konstruktorfunktion (blueprint) */
+function Skiva(artist,titel) {
+    this.artist = artist;
+    this.titel = titel;
+}
+let condolences = new Skiva("Wednesday 13","Condolences");
+let hungover = new Skiva("Bourbon Crow","Hungover hits from hell");
+console.log(condolences);
+console.log(hungover);
+
+
 // Objekt med en metod, som får en till metod, sedan anropas båda
 let objektMetoder = {
     namn: function() {
