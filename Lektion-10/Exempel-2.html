@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exempel 2</title>
+</head>
+
+<body>
+    <h1>Ternary-operatorn</h1>
+
+    <script>
+        function promptAge() {
+            let age = prompt('Hur gammal är du?');
+            if (age === null || age === '' || isNaN(age)) {
+                alert('Felaktig inmatning!');
+                return;
+            }
+
+            /*
+            let votable = '';
+                    
+            if (age<18) {
+                votable = "Du får inte rösta!";
+            }
+            else {
+                votable = "Du får rösta!";
+            } */
+
+
+            // Ternary istället för if-else
+            let votable = age < 18 ? "Du får inte rösta" : "Du får rösta!";
+            //             villkor ? Gör detta om sant   : Gör detta om falskt
+
+            alert(votable);
+        }
+        promptAge();
+
+
+    </script>
+</body>
+
+</html>
