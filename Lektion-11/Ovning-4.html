@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Skriv ett program som läser in ett heltal (n), via en prompt.
+        Kontrollera att du får ett heltal och visa lämpliga felmeddelanden vid fel.
+        Beräkna summan av n (dvs. 1+2+3+4+... n)
+    
+        Exempel: om talet n är 5 så skall programmet räkna ut 1+2+3+4+5 = 15
+        
+        Tips! Använd Number.isInteger()
+        */
+
+        // Inmatning och felkontroll
+        let n;
+        while (true) {
+            n = prompt("Skriv in ett heltal:");
+            if (n === null)
+                break;
+            else if (!Number.isInteger(Number(n))) {
+                console.log(Number.isInteger(Number(n)));
+                alert("Du måste ange ett nummer!");
+                continue;
+            }
+            else {
+                // Uträkning
+                let summa = 0;
+                for (let i = 1; i <= n; i++) {
+                    summa += i;
+                }
+                // Presentation
+                alert("Summan av " + n + " är " + summa + ".");
+
+                break;
+            }   
+        }
+    </script>
+</body>
+
+</html>
