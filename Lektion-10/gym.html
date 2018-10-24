@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Övning - Gym
+// Steg 1: läs in värden
+let arskort = prompt('Kostnad för årskort?');
+let biljett = prompt('Kostnad för enkelbiljett?');
+let besok = prompt('Hur ofta kommer du besöka gymmet?');
+
+// Steg 2: kontrollera om det lönar sig med årskort eller enskilda biljetter
+let billigast = (arskort <= (biljett*besok))
+    ? `Det lönar sig att köpa ett årskort!\nKostnad för årskort: ${arskort}kr\nKostnad för ${besok} besök: ${biljett*besok}kr.`
+    : `Det lönar sig att köpa enstaka biljetter!\nKostnad för årskort: ${arskort}kr\nKostnad för ${besok} besök: ${biljett*besok}kr.`;
+
+// Steg 3: Skriv ut
+alert(billigast);
+
+</script>
+</body>
+</html>
