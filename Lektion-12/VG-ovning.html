@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VG-Övning</title>
+</head>
+<body>
+    <h1>VG-Övning</h1>
+    <p>
+        första ordet i en ny
+        mening. man sätter alltid
+        stor bokstav på det första
+        ordet i en ny mening. detta
+        för att visa att en ny
+        kommunikation startar.
+    </p>
+    <p>
+        första ordet i en ny
+        mening. man sätter alltid
+        stor bokstav på det första
+        ordet i en ny mening. detta
+        för att visa att en ny
+        kommunikation startar.
+    </p>
+    <p>
+        gäddan cyklar. det gör inte fiskbullen.
+        köp en gris. det kan man göra ibland .
+    </p>
+    <p>
+        gris    . 
+        cykel .    . gädda.
+        morotsbanan.
+    </p>
+    
+    <script>
+        // Detta script går igenom alla p-taggar och sätter stor bokstav på första ordet i varje mening.
+        // Som bonus, kalla det bugg eller feature, så tas blanka meningar bort, och extra tomma mellanrumm.
+
+        let allP = document.getElementsByTagName('p');              // Hämta elementen
+        for (let i=0; i<allP.length; i++) {                         // Iterera över alla P element
+            let meningar = allP[i].innerHTML.split('.');            // Splittar varje mening i aktuellt P-element till en array
+            let stycke = '';                                        // Initiera stycke för att den ska vara tillgänglig utanför kommande for-loop
+            for (let i=0; i<meningar.length; i++) {                 // Iterera över alla meningar i aktuellt P-element
+                if (meningar[i].trim() !== '')                      // Om aktuell mening utan blanksteg i början/slut inte är tom
+                    stycke +=                                       // Lägg till den trimmade meningen med stor första bokstav och punkt på slutet.
+                        meningar[i].trim().charAt(0).toUpperCase()
+                        + meningar[i].trim().substring(1)
+                        +'. '
+                    ;
+            }
+            allP[i].innerHTML = stycke;                             // Uppdatera aktuellt P-element med nytt stycke.
+        }  
+    </script>
+</body>
+</html>

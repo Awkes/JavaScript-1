@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Exempel 1</title>
+</head>
+<body>
+    <h1 id="one">Exempel 1</h1>
+    
+    <p id="demo">Lite text och annat smått och gott.</p>
+    
+    <script>
+        let h = document.getElementById('one');
+        console.log(h); // <h1 id="one">Exempel 1</h1>
+        
+        // Ändra innehållet
+        let p = document.getElementById('demo');
+        p.innerText = 'Hello DOM'; // Ändrar enbart text
+        p.innerHTML = '<b>En tjock text</b>'; // Ändrar HTML
+               
+        
+        
+        
+        h = document.getElementById('FEL');
+        console.log(h); // null
+
+        if (h === null) {
+            console.log('Elementet saknas');
+        }
+        else {
+            console.log('Det finns ett element med id="FEL"');
+        }
+
+
+    </script>
+</body>
+</html>

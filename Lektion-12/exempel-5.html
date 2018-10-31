@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exempel 5</title>
+    <style>
+        .nice {
+            color:green;
+            background-color: #000;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gädda</h1>
+    <h1>Mört</h1>
+    <h1>Brax</h1>
+    <h1>Gös</h1>
+    <h1>Ål</h1>
+    <h1>Räka</h1>
+    
+    <script>
+        // Hämta alla H1
+        let h = document.getElementsByTagName('h1'); // referens till HTMLCollection(x)
+
+        // Ändra klass på första H1
+        h[0].className = 'nice';
+
+        // Ändra klass på sista H1
+        h[h.length-1].className = 'nice';
+    </script>
+
+</body>
+</html>

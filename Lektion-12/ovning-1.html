@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Övning 1</title>
+</head>
+<body>
+    <h1>Övning 1</h1>
+    <p>Stycke 1</p>
+    <p>Stycke 2.</p>
+    <p>Stycke 3</p>
+    
+    <script>
+        // Hämta alla P
+        let allP = document.getElementsByTagName('p');
+        
+        // Iterera över HTMLCollection innehållandes alla P
+        for (let i=0; i<allP.length; i++) {
+            if (!allP[i].innerHTML.endsWith('.')) { // Om texten i P-element inte slutar på .
+                allP[i].innerHTML += '.';           // läggs . till i det aktuella elementets text.
+            }
+        }
+    </script>
+</body>
+</html>

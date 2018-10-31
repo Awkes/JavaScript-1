@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Övning 2</title>
+</head>
+<body>
+    <h1>Övning 2</h1>
+    <p>Stycke 1.</p>
+    <p>stycke 2.</p>
+    <p>stycke 3.</p>
+    
+    <script>
+        let allP = document.getElementsByTagName('p');
+        for (let i=0; i<allP.length; i++) {
+            allP[i].innerHTML = allP[i].innerHTML.charAt(0).toUpperCase() + allP[i].innerHTML.substring(1);
+        }
+    </script>
+</body>
+</html>
