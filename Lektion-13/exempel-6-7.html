@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exempel 6 och 7</title>
+</head>
+<body>
+    <h1>Exempel 6 och 7</h1>
+    
+    <p 
+        onmouseover="this.style.color='gold'"
+        onmouseout="this.style.color='black'"
+    >
+        Peka här för att ändra färgen!
+    </p>
+
+    <button onclick="getTime('time');">What time is it right now?</button>
+    <h1 id="time"></h1>
+    
+    <script>
+        function getTime(id) {
+            let el = document.getElementById(id);
+            el.innerHTML = new Date().toTimeString().substr(0,8);
+            setInterval(function(){
+                el.innerHTML = new Date().toTimeString().substr(0,8);
+            },1000);
+        }
+    </script>
+</body>
+</html>

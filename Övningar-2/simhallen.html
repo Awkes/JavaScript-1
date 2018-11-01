@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simhallen</title>
+</head>
+
+<body>
+    <h1>Simhallen</h1>
+
+    <script>
+
+        /*
+        På en simhall kan man antingen köpa ett årskort eller köpa en biljett vid varje besök.
+        
+        Skapa ett program som läser in (via en enda prompt) priset för ett årskort, priset
+        för en biljett samt antalet gånger man planerar att simma under ett år.
+        
+        Därefter skall programmet visa (via en alert) om det lönar sig att köpa årskort eller inte.
+        */
+        
+        let arBiljettBesok = prompt('Ange pris för årskort, pris för enkelbiljett och antal planerade besök under ett år.\nAnge i följande format: årskort,biljett,antal').split(',');
+        alert((Number(arBiljettBesok[0]) <= Number(arBiljettBesok[1]) * Number(arBiljettBesok[2])) ? 'Det lönar sig!' : 'Det lönar sig inte!' );
+
+    </script>
+
+</body>
+
+</html>

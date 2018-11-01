@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kafét</title>
+</head>
+
+<body>
+    <h1>Kafét</h1>
+
+    <script>
+        /*
+        Det finns ett kafé som erbjuder 10% rabatt
+        om man spenderar minst 1000kr på kaffe per
+        månad via deras medlemskort.
+        
+        Kostnaden per kaffekopp är i genomsnitt 12kr.
+        
+        Skapa ett program som läser in (via en
+        prompt) antalet kaffekoppar man i
+        genomsnitt köper per dag.
+        
+        Programmet ska via en dialogruta (alert) visa
+        om man har rätt till rabatten och även visa
+        hur mycket rabatt man får.
+        
+        Programmet ska visa hur många fler
+        kaffekoppar man måste köpa för att få 10%
+        rabatt (i fall man har spenderat för lite
+        pengar).
+        */
+
+        let antal = prompt('Hur många kaffekoppar köper du i snitt på en dag?');
+
+        let rabattsats = 0.1;
+        let koppKostnad = 12;
+        let totalKostnad = antal * koppKostnad * 30;
+
+        if (totalKostnad >= 1000) {
+            alert('Du har rätt till rabatten!\nKostnad: ' + totalKostnad + '\nRabatt: ' + totalKostnad * rabattsats);
+        }
+        else {
+            let kopparKvar = Math.ceil((1000 - totalKostnad) / koppKostnad);
+            alert('Du har inte rätt till rabatten!\nKostnad: ' + totalKostnad + '\nDu måste dricka ' + kopparKvar + ' koppar till!\nDvs ' + kopparKvar / 30 + ' om dagen');
+        }
+    </script>
+
+</body>
+
+</html>

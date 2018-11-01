@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exempel 9</title>
+</head>
+
+<body>
+    <h1>Exempel 9</h1>
+
+    Ange pris exkl. moms:
+    <input type="text" id="price1">
+
+    <button id="btnPrice">Beräkna pris inkl. moms</button>
+    <p id="price2">Resultat:</p>
+    
+    <script>
+        // Hämta nödvändiga element
+        let elPrice1 = document.getElementById('price1');
+        let elPrice2 = document.getElementById('price2');
+        let btnPrice = document.getElementById('btnPrice');
+
+        // Koppla event till knappen
+        btnPrice.onclick = getPrice;
+        elPrice1.oninput = getPrice;
+
+        // Funktion som räknar ut pris inkl moms
+        function getPrice() {
+            if (isNaN(elPrice1.value) || elPrice1.value === '')
+                elPrice2.innerHTML = 'Resultat: Du måste ange ett tal';
+            else
+                elPrice2.innerHTML = 'Resultat: ' + elPrice1.value*1.25;
+        }
+    </script>
+</body>
+
+</html>

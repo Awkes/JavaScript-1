@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Övning 4</title>
+</head>
+<body>
+    <h1>Övning 4</h1>
+    
+    <p id="demo">
+        Dölj texten genom att klicka på knappen nedan.
+    </p>
+    <button>Dölj</button>
+
+    <script>
+        // Hämta element
+        let btn = document.getElementsByTagName('button')[0];
+
+        // Koppla event
+        btn.onclick = function() { document.getElementById('demo').style.display='none';  }
+    </script>
+    
+</body>
+</html>

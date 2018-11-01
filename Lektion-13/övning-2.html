@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Övning 2</title>
+</head>
+<body>
+    <h1>Övning 2</h1>
+    
+    <button>Red</button>
+
+    <script>
+        // Hämta referenser
+        let btn = document.getElementsByTagName('button')[0];
+        
+        // Koppla standard DOM event till anonym funktion
+        btn.onclick = function() {
+            document.body.bgColor = 'red';
+        }
+    </script>
+    
+</body>
+</html>

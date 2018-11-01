@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exempel 3</title>
+</head>
+<body>
+    <h1>Exempel 3</h1>
+    
+    <p></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <button onclick="changeFirstParagraphText()">Klicka här för att ändra första P</button><br>
+    <button onclick="changeIdDemoText('demo1'); changeColor('demo1','lime')">Klicka här för att ändra p med id="demo1"</button><br>
+    <button onclick="changeIdDemoText('demo2'); changeColor('demo2','deeppink')">Klicka här för att ändra p med id="demo2"</button><br>
+    <button onclick="changeIdDemoText('demo3'); changeColor('demo3','purple')">Klicka här för att ändra p med id="demo3"</button><br>
+
+    <script>
+
+        function changeIdDemoText(id) {
+            let demo = document.getElementById(id);
+            demo.innerHTML = 'Du är en gädda! ';
+        }
+
+        
+        function changeColor(id,color) {
+            let demo = document.getElementById(id);
+            demo.style.color = color;
+        } 
+
+        function changeFirstParagraphText() {
+            let demo = document.getElementsByTagName('p')[0];
+            demo.innerHTML = 'Du är en gädda! ';
+            demo.style.color = 'hotpink';
+        }
+    </script>
+</body>
+</html>

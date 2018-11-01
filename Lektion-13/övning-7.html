@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Övning 7</title>
+</head>
+<body>
+    <h1>Övning 7</h1>
+    
+    <button>What is the time now?</button>
+    <h1 id="time"></h1>
+    
+    <script>
+        // Hämta elelment
+        let btn = document.getElementsByTagName('button')[0];
+
+        // Koppla event
+        btn.onclick = getTime;
+
+        // Funktion
+        function getTime() {
+            document.getElementById("time").innerHTML = new Date().toTimeString().substring(0,8);
+        }
+    </script>
+    
+</body>
+</html>

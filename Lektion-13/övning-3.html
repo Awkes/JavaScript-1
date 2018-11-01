@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Övning 3</title>
+</head>
+<body>
+    <h1>Övning 3</h1>
+    
+    <p id="demo"></p>
+
+    <button>Click me!</button>
+
+    <script>
+        // Hämta referenser till element
+        let btn = document.getElementsByTagName('button')[0];
+
+        // Standard DOM Events
+        btn.onclick = myFunction;
+
+        // Funktion
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Hello World";
+        }
+    </script>
+    
+</body>
+</html>
