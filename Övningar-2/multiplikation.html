@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplikationstabellen</title>
+</head>
+<body>
+    <h1>Multiplikationstabellen</h1>
+
+    <script>
+        /*
+            Skapa ett program i JavaScript som ber användaren mata in
+            ett tal mellan 1 och 10 via en prompt.
+            Programmet ska därefter visa talets multiplikationstabell.
+        */
+        let tal;
+        while (true) {
+            tal = prompt('Mata in ett tal mellan 1-10!');
+            if (tal === null)
+                break;
+            else if (isNaN(Number(tal)) || Number(tal) > 10 || Number(tal) < 1) {
+                alert('Felaktig inmatning, försök igen!');
+                continue;
+            }
+            else {
+                for (let i=1; i<=10; i++) {
+                    document.write(i+' x '+tal+' = '+(tal*i)+'<br>');
+                }
+                break;
+            }
+        }
+    </script>
+    
+</body>
+</html>

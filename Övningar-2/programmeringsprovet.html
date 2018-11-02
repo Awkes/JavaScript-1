@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programmeringsprovet</title>
+</head>
+<body>
+    <h1>Programmeringsprovet</h1>
+    <p>Ditt betyg är: <span id="betyg"></span></p>
+    
+    <script>
+        /*
+            På programmeringsprovet kan man få högst 50 poäng.
+            Gränsen för betyget G är 50% och för betygen VG är 70%.
+            
+            Skriv ett program som läser in (via en prompt) poängen för en student
+            och som visar vilket betyg hon eller han fått på provet.
+        */
+
+        let points;
+        // Loopen pågår tills rätt inmatning utförs, och då exekveras funktionen calcGrade()
+        while (true) {
+            points = prompt("Hur många poäng fick du på programmeringsprovet? (0-50)");
+            if (points == null) {   // Om man trycker på avbryt stannar programmet
+                break;
+            }
+            else if (isNaN(Number(points)) || Number(points) > 50 || Number(points) < 0) {  // Om felaktig inmatning sker kommer felmeddelande
+                alert('Du måste ange ett nummer mellan 0-50!');
+                continue;
+            }
+            else {  // Exekverea funktion och skriv ut betyget.
+                document.getElementById('betyg').innerHTML = calcGrade(points);
+                break;
+            }
+        }
+        
+        // funktion för uträkning
+        function calcGrade(points) {
+            let maxPoints = 50;
+            if (points < 0.5*maxPoints)
+                return 'IG';
+            else if (points < 0.75*maxPoints)
+                return 'G';
+            else
+                return 'VG';
+        }
+        
+
+    </script>
+</body>
+</html>
