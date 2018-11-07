@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Övningstenta - Del 2 - Programmering Uppgift 1</title>
+</head>
+<body>
+    <h1>Del 2 - Programmering Uppgift 1</h1>
+    <p id="alder"></p>
+    <script>
+        /*
+            Skriv ett program som ber användaren mata in (via en prompt) sitt födelsedatum i detta format ÅÅÅÅ-MM-DD.
+            Programmet ska räkna ut personen ålder. Visa på webbsidan hur många år, månader och dagar personen är gammal.
+            Implementera alla nödvändiga felkontroller och visa olika felmeddelanden vid felaktig inmatning!
+        */
+        let birthDate;
+        let birthArr;
+        let today = new Date();
+        while (true) {
+            birthDate = prompt('Ange ditt födelsedatum i detta format ÅÅÅÅ-MM-DD');
+            birthArr = birthDate.split('-');
+            // Avbryter om vi klickar på avbryt
+            if (birthDate === null) {
+                break;
+            }
+            // Kollar längden på strängen
+            else if (birthDate.length !== 10) {
+                alert('Felaktigt antal tecken!')
+            }
+            // Kollar att rätt format används
+            else if (birthArr.length !== 3 || birthArr[0].length !== 4 || birthArr[1].length !== 2 || birthArr[2].length !== 2) { 
+                alert('Felaktigt format!');
+            }
+            // Kollar att det enbart är siffror och "-" inmatat
+            else if (isNaN(Number(birthArr[0])) || isNaN(Number(birthArr[1])) || isNaN(Number(birthArr[2]))) {
+                alert('Du får enbart mata in siffror och "-"');
+            }
+            // Kollar att år, månad och dag är inom gräns
+            else if (Number(birthArr[0]) < 1900 || Number(birthArr[0]) > today.getFullYear() || Number(birthArr[1]) < 1 || Number(birthArr[1]) > 12 || Number(birthArr[3]) < 1 || Number(birthArr[3]) > 31) {
+                alert('Datumet ligger utanför gränserna 1900-01-01 - 2018-12-31');
+            }
+            // Om allt är rätt skriv ut resultat
+            else {
+                let years = today.getFullYear() - Number(birthArr[0]);
+                let months = today.getMonth()+1 - Number(birthArr[1]);
+                let days = today.getDate() - Number(birthArr[2]);
+
+                if (today.getMonth()+1 < Number(birthArr[1])) {
+                    years--;
+                    months += 12;
+                }
+                if (today.getDate() < Number(birthArr[2])) {
+                    months--;
+                    days += 30;
+                }
+                
+                document.getElementById('alder').innerHTML = `
+                    Du har angett följande födelsedatum: ${birthDate}.<br>
+                    Du är ${years} år, ${months} månader och ${days} dagar gammal.
+                `;
+                break;
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
