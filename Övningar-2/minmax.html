@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Max och min</title>
+</head>
+<body>
+    <h1>Max och min</h1>
+
+    <script>
+        /*      
+            Skriv ett program som läser in
+            ett godtyckligt antal tal
+            (även negativa) via prompt.
+            När användaren klickar
+            på knappen Avbryt
+            så skall programmet skriva ut
+            det största och det minsta
+            av de inlästa talen.
+        */
+        let tal = [];
+        let inmatn;
+        while (true) {
+            inmatn = prompt('Mata in tal.\nTryck på avbryt när du inte vill mata in fler.');
+            if (isNaN(Number(inmatn))) {
+                alert('Du måste mata in ett tal!');
+            }
+            else if (inmatn === null) {
+                if (tal.length < 1)
+                    break;
+                else {
+                    document.write('Högsta talet är: '+Math.max(...tal)+'.<br>Lägsta talet är: '+Math.min(...tal)+'.<br><br> Alla inmatade tal är: '+tal+'.');
+                    break;
+                }
+            }
+            else {
+                tal.push(Number(inmatn));
+            }
+        }
+    </script>
+    
+</body>
+</html>
